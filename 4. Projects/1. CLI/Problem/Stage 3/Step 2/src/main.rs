@@ -15,6 +15,10 @@ use navigator::*;
 
 fn main() {
     // TODO: create database and navigator
+
+    let db = db::JiraDatabase::new(file_path);
+
+    let navigator = navigator::Navigator::new(db);
     
     loop {
         clearscreen::clear().unwrap();
